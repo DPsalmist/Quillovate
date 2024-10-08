@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/svg+xml" href="images/quillovate_logo2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Quillovate - Your Writing Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> -->
+    <meta name="description" content="Quillovate is a dynamic platform for writers, researchers, and content creators. Join our community and showcase your expertise with writing support, research assistance, and content creation guidance.">
+    <meta name="author" content="Damilare Samuel, Sodbridge team">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/quillovate_logo2.png" alt="Quillovate Logo">
+                </a>
+            </div>
+          <!--   <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+ -->            
+            <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+
+            <ul class="menu" id="menu">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#steps">How it Works</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#join">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div> <!-- Dark overlay on the hero image -->
+        <div class="hero-content">
+            <h1 class="fading-text">Welcome to Quillovate, <br> Your Reliable Writing Companion</h1>
+            <p>For Writers, Researchers, and Content Creators</p>
+            <a href="#join" class="cta-btn">Join Our Community</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <!-- <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Quillovate is a collaborative effort of passionate researchers and seasoned writers committed to excellence in every word. 
+            Our team brings a wealth of experience in academia, content creation, and professional writing. Whether you're looking for 
+            in-depth research, precise content creation, or insightful writing advice, we’re here to elevate your projects to new heights.
+        </p>
+        <p>
+        At Quillovate, we believe in the power of words to shape ideas, inform decisions, and drive progress. We offer a unique <strong>Writing-as-a-Service (WaaS)</strong> platform that connects businesses with expert writers, researchers, and content creators. Our in-house team is dedicated to delivering high-quality content that meets your business needs—whether you're looking for blog posts, research papers, marketing content, or technical documentation.
+    </p>
+    </section>
+ -->
+    <section id="about">
+    <h2>About Us</h2>
+    <div class="about-container">
+        <div class="about-description">
+            <h3>Who We Are</h3>
+            <p>
+            Quillovate is a collaborative effort of passionate researchers and seasoned writers committed to excellence in every word. Our team brings a wealth of experience in academia, proof reading, content creation, and professional writing. </p> 
+            <p>At Quillovate, we believe in the power of words to shape ideas, inform decisions, and drive progress. Whether you're looking for in-depth research, precise content creation, or insightful writing advice, we’re here to elevate your projects to new heights.
+            </p> 
+            <small> We're currently working on a unique <b>Writing-as-a-Service (WaaS)</b> platform that connects businesses with expert writers, researchers, and content creators.</small>
+        </div>
+        <div class="core-values">
+            <h3>Our Core Values</h3>
+            <div class="value" style="padding-left:0rem">
+                <img src="images/integrity.png" alt="Integrity Icon">
+                <p><i>Integrity</i></p>
+            </div>
+            <div class="value" style="padding-left: 2rem;">
+                <img src="images/creativity-icon1.jpeg" alt="Creativity Icon">
+                <p><i>Creativity</i></p>
+            </div>
+            <div class="value" style="padding-left: 4rem;">
+                <img src="images/satisfaction-icon2.png" alt="Customer Satisfaction Icon">
+                <p><i>Customer Satisfaction</i></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Core Services</h2>
+        <div class="service-cards">
+            <div class="service-card step">
+                <img src="images/write-support1.png" alt="Service 1">
+                <h3>Writing Support</h3>
+                <p>Get assistance from professional writers to refine your content and meet your deadlines.</p>
+            </div>
+            <div class="service-card step">
+                <img src="images/research2.png" alt="Service 2">
+                <h3>Research Assistance</h3>
+                <p>Access comprehensive research support to enhance the quality and depth of your work.</p>
+            </div>
+            <div class="service-card step">
+                <img src="images/content-creation1.jpeg" alt="Service 3">
+                <h3>Content Creation Guidance</h3>
+                <p>Receive expert advice to create compelling content that resonates with your audience.</p>
+            </div>
+        </div>
+        <div class="services-image">
+            <img src="images/write-write.gif" alt="Creative Writing Illustration">
+        </div>
+    </section>
+
+    <!-- Steps for Clients Section -->
+    <section id="steps">
+        <h2>How it Works</h2>
+        <div class="steps-container">
+            <div class="step card">
+                <div class="card-front">
+                    <img src="images/submit-project-icon.png" alt="Submit Project">
+                    <h3>Submit Your Project</h3>
+                </div>
+                <div class="card-back">
+                    <p>Clients start by submitting a project request. Whether you need research, writing, or content creation, we'll gather your requirements and assign the task to our team of in-house experts.</p>
+                </div>
+            </div>
+            <div class="step card">
+                <div class="card-front">
+                    <img src="images/commitment-fee-icon.png" alt="Commitment Fee">
+                    <h3>Pay Commitment Fee</h3>
+                </div>
+                <div class="card-back">
+                    <p>Once the project details are agreed upon, a commitment fee is required. This upfront fee secures your place in our queue and demonstrates your interest in the project. Full payment is made upon project completion.</p>
+                </div>
+            </div>
+            <div class="step card">
+                <div class="card-front">
+                    <img src="images/working-on-project-icon.png" alt="Working on Project">
+                    <h3>We Get to Work</h3>
+                </div>
+                <div class="card-back">
+                    <p>Our team works diligently to deliver high-quality content on time. We keep you informed throughout the process to ensure everything meets your expectations.</p>
+                </div>
+            </div>
+            <div class="step card">
+                <div class="card-front">
+                    <img src="images/project-completion-icon.jpg" alt="Project Completion">
+                    <h3>Review & Pay</h3>
+                </div>
+                <div class="card-back">
+                    <p>Once the project is complete, review the final product. After approval, full payment is made, and we hand over all completed files.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="images/email.png" alt="Email Icon">
+                <p>Email: <a href="mailto:info@quillovate.com">info@quillovate.com</a></p>
+            </div>
+            <div class="contact-item">
+                <img src="images/contact-us.png" alt="Phone Icon">
+                <p>Phone: <a href="tel:++2348163502922">+234-816-3502-922</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section id="join">
+        <h2>Join Us Today</h2>
+        <p>If you're passionate about writing, research, or content creation, become part of our community and grow with Quillovate!</p>
+        <a href="#" class="cta-btn">Join Our Community</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Quillovate. All Rights Reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

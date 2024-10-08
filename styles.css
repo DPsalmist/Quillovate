@@ -1,0 +1,502 @@
+/* General styles */
+/* General Fix for Centering Elements */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
+body {
+    font-family: 'Sora', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+header {
+    padding: 20px 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    text-align: center;
+    padding-left: 0px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+    text-align: center;
+    justify-content: center;
+}
+
+nav ul li a:hover {
+    color: royalblue;
+}
+
+
+/* About Us Section */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about-description, .core-values {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+}
+
+.core-values .value {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.core-values img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Hamburger Menu1 */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+/* Hamburger Menu2 */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 4px;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul.menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 100;
+    }
+
+    nav ul.menu.active {
+        display: flex;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .steps-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+
+
+/* Card Hover Effect *//*
+
+.step:hover .card {
+    transform: rotateY(180deg); 
+}
+
+.card .front, .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+}
+
+.card .back {
+    transform: rotateY(180deg);
+}*/
+
+
+/* Card Flip Effect */
+/*.card {
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.card-front {
+    background-color: white;
+    z-index: 2;
+}
+
+.card-back {
+    background-color: royalblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg);
+}
+*/
+
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#steps {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#steps h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.step {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px; /* Add perspective for 3D effect */
+    position: relative; /* new */
+}
+
+.step img {
+    width: 30%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 1.5, 0.3);
+}
+
+/* Card Flip Effect */
+.step .card {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d; 
+    transition: transform 0.6s;
+}
+
+.step:hover .card {
+    transform: rotateY(180deg); /* Flip on hover */
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide backface on flip */
+}
+
+.card .front {
+    background-color: white;
+    z-index: 2;
+}
+
+.card .back {
+    background-color: royalblue;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(0deg);
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background-image: url('images/hero_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* Fading Text Effect */
+.fading-text {
+    background: linear-gradient(to right, white, royalblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fade 2s infinite alternate;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;         
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        top: 60px;
+        left: 0;
+    }
+    
+    .menu-toggle {
+        display: flex; /* Show hamburger menu */
+    }
+    
+    .steps-container {
+        display: grid; /* Use grid layout for steps */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 20px; /* Space between cards */
+    }
+}
+
+
+
+/* Center Join Us Section */
+#join {
+    text-align: center; /* Center text */
+}
+
+.logo img {
+    width: 80px;
+    padding-left: 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: royalblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* About Us Section */
+#about {
+    padding: 50px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.0rem;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+
+/* Services Section */
+#services {
+    padding: 50px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.services-image {
+    margin-top: 50px;
+}
+
+.services-image img {
+    width: 300px;
+}
+
+
+/* Contact Us Section */
+#contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.contact-item a {
+    color: royalblue;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    color: black;
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
